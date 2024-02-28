@@ -28,7 +28,8 @@ class SeriesController{
       /* return view('lista-series', [
                         'series' => $series
                  ]); */
-      return view('lista-series')->with('series', $series);
+      //ao inves de ser series/index é series.index
+      return view('series.index')->with('series', $series);
                  
    }
 

@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,33 +10,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Series - Laravel</title>
+    <title>{{ $title }}</title>
   </head>
   <body class="bg-dark text-light">
     <h1>Lista das Séries!</h1>
-    <ul>
-        <!-- Em Blade -->
-        @foreach($series as $serie)
-           <li> {{ $serie }} </li>
-        @endforeach
-        
-        
-        @php $texto = 'Verdadeira a Situação'; @endphp
-        
-        @php 
-           $vdd = true; 
-           $a = 20;
-           $b = 30;
-           $soma = $a + $b; 
-        @endphp
-
-        <h1>
-        {{-- Imprime os valores entre {{  }} --}}
-        @if($vdd == true)
-           {{ $texto }} - {{ $soma }}
-        @endif
-        </h1>
-    </ul>
+        <!-- Slot ele pega o index.blade.php  -->
+        {{ $slot }} 
 
     <!-- Optional JavaScript; choose one of the two! -->
 
